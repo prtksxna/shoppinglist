@@ -1,0 +1,79 @@
+body{
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+}
+
+/*HEADER*/
+
+.logo{
+    background-image: url(../images/logo.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 3em;
+    margin: 4em 0 1em 0;
+}
+
+
+.done-count{
+    font-family: 'monaco', monospace;
+    font-size: 1em;
+    color: red;
+    letter-spacing: .5em;
+    text-align: center;
+}
+
+
+/*INPUT*/
+
+
+form{
+    padding: 2em 28em 10em 28em;
+}
+
+.form-list{
+    position:relative;
+}
+
+input{
+    background: #fff;
+    margin-left:40px;
+    position:relative;
+    border: 0px;
+    border-bottom: 1px solid #ccc;
+    width: 84%;
+    padding: 2em 0 1.2em 0;
+    font-size: 1em;
+    color: #347bff;
+}
+
+input:focus{
+    outline: none;
+    border-bottom: 1px solid #347bff;
+
+}
+
+input:placeholder{
+    color: red;
+}
+
+button.delete{
+    position:absolute; 
+    right:0;
+    bottom: 1.3em;
+    background-image: url(../images/delete.svg);
+    background-repeat: no-repeat;
+    padding: 1.2em;
+    background-color: transparent;
+    border: none;
+}
+
+button.done{
+    position:absolute; 
+    left:0;
+    bottom: 1.3em;
+    background-image: url(../images/done.svg);
+    background-repeat: no-repeat;
+    padding: 1.2em;
+    background-color: transparent;
+    border: none;
+}
