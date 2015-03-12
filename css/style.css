@@ -1,3 +1,9 @@
+@media (max-width: 640px){
+       body > form{
+           width: 98%;
+       }
+}
+
 body{
     font-family: 'Helvetica Neue', sans-serif;
     font-size: 16px;
@@ -27,7 +33,8 @@ body{
 
 
 form{
-    padding: 2em 28em 10em 28em;
+    margin: 0 auto;
+    width: 40em;
 }
 
 .form-list{
@@ -40,7 +47,7 @@ input{
     position:relative;
     border: 0px;
     border-bottom: 1px solid #ccc;
-    width: 84%;
+    width: 88%;
     padding: 2em 0 1.2em 0;
     font-size: 1em;
     color: #347bff;
