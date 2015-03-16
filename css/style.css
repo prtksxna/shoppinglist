@@ -142,11 +142,11 @@ div.delete{
     background-image: url(../images/delete.png);
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 10em;
+    padding: 9em;
     position: right;
     position: fixed;
     bottom: 0;
-    right: 5em;
+    right: 6em;
 }
 
 .delete-list{
@@ -161,19 +161,6 @@ div.delete{
     display: none;
 }
 
-/*
-button.delete-list:hover {
-    position: absolute;
-    left: 0;
-    bottom: .5em;
-    background-image: url(../images/delete_hover.svg);
-    background-repeat: no-repeat;
-    padding: 1.2em;
-    background-color: transparent;
-    border: none;
-    display: none;
-}
-*/
 
 button.delete-list:focus{
     outline: none;
