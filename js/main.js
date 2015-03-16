@@ -84,6 +84,20 @@ $(document).ready(function() {
     });
     
 
+    
+    
+// ON HOVER, MOVE ERASER
+    $('div.delete').mouseover(function(){
+        $(this).css("right", "+=5px");
+    });
+    
+// ON MOUSEOUT, MOVE ERASER BACK
+    $('div.delete').mouseout(function(){
+        $(this).css("right", "-=5px");
+    });
+    
+    
+    
 // DELETING ITEM(S) //
     
     $('.delete').click(function() { // When eraser is clicked
@@ -110,15 +124,7 @@ $(document).ready(function() {
         });
     });
     
-// ON HOVER, MOVE ERASER
-    $('div.delete').mouseover(function(){
-        $(this).css("right", "12.4em");
-    });
-    
-// ON MOUSEOUT, MOVE ERASER BACK
-    $('div.delete').mouseout(function(){
-        $(this).css("right", "12em");
-    });
+
     
 // DONE DELETING ITEM //
 
