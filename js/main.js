@@ -95,8 +95,8 @@ $(document).ready(function() {
     
     $(document).on('click', '.delete-list', function() { // WHEN DELETE BUTTON IS CLICKED
         $('.done','.undone-list').hide();// ALL DONE AND UNDONE BUTTONS HIDE
-        $(this).parent().children().fadeOut(230, function() { // "Delete-list" button and that particular <div></div> will fade out and disappear
-            $(this).parent().slideUp(800, function() { // Animation to slide remaining <div>'s up
+        $(this).parent().children().fadeOut(300, function() { // "Delete-list" button and that particular <div></div> will fade out and disappear
+            $(this).parent().delay(300).slideUp(500, function() { // Animation to slide remaining <div>'s up
                 $(this).remove(); //Once <div></div> has disappeared
             });
         });
