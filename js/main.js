@@ -6,6 +6,8 @@ var anotherListItem = '<div class="form-list"><button type="button" class="delet
 $(document).ready(function() {
 
     $('input:first').focus();
+    $('.delete').delay(1000).animate({right: "10em"}, 500);
+    
 
     // ADDING MORE ITEMS ON THE LIST //
 
@@ -86,7 +88,7 @@ $(document).ready(function() {
 
     $(document).on('click', '.delete', function() { // When eraser is clicked
         $('.done').fadeOut(400); // "Done" buttons disappear
-        $('.delete').animate({right: "35em"}, 300);// ERASER DISAPPEAR
+        $('.delete').animate({right: "30em"}, 300);// ERASER DISAPPEAR
         $('.undone-list').fadeOut(400); // "Undone" buttons disappear
             $('button.delete-list').fadeIn(500); // "Delete buttons appear
         });
