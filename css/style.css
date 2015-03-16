@@ -1,17 +1,42 @@
-@media (max-width: 640px){
-       body > form{
-           width: 98%;
-       }
+@media (max-width: 640px) {
+    body > form {
+        width: 98%;
+    }
 }
 
-body{
-    font-family: 'Helvetica Neue', sans-serif;
+html{
+    font-family: 'Permanent Marker', cursive;
+}
+
+img.bg {
+    /* Set rules to fill background */
+    min-height: 100%;
+    min-width: 1024px;
+    /* Set up proportionate scaling */
+    width: 100%;
+    height: auto;
+    /* Set up positioning */
+    position: fixed;
+    top: 0;
+    left: 0;
+    
+    z-index: -1;
+}
+
+body {
+    margin-top: 4em;
+    overflow: hidden;
+    
+}
+.page {
     font-size: 16px;
+    -webkit-transform: rotate(14.5deg);
+    -moz-transform: rotate(14.5deg);
 }
 
 /*HEADER*/
 
-.logo{
+.logo {
     background-image: url(../images/logo.svg);
     background-repeat: no-repeat;
     background-position: center;
@@ -19,53 +44,64 @@ body{
     margin: 4em 0 1em 0;
 }
 
-
-.done-count{
-    font-family: 'monaco', monospace;
+/*
+.done-count {
     font-size: 1em;
     color: red;
     letter-spacing: .5em;
-    text-align: center;
+    text-align: right;
 }
-
+*/
 
 /*INPUT*/
 
-
-form{
-    margin: 0 auto;
-    width: 40em;
+form {
+    margin: 2em 18em;
+    width: 29em;
+    overflow: scroll;
+    max-height: 50em;
+    position: fixed;
 }
-
-.form-list{
-    position:relative;
+.form-list {
+    position: relative;
 }
-
-input{
-    background: #fff;
-    margin-left:40px;
-    position:relative;
+input {
+    background: transparent;
+    margin-left: 40px;
+    position: relative;
     border: 0px;
-    border-bottom: 1px solid #ccc;
+/*  border-bottom: 1px solid #ccc;*/
+    border-bottom: none;
     width: 88%;
-    padding: 2em 0 1.2em 0;
-    font-size: 1em;
-    color: #347bff;
+    padding: 0;
+    font-size: 3em;
+    color: #333;
+    font-family: 'Permanent Marker', cursive;
+    height: 1.2em;
 }
 
-input:focus{
+::-webkit-input-placeholder {
+   color: #d9dbe0;
+}
+:-moz-placeholder { /* Firefox 18- */
+   color: #d9dbe0;  
+}
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #d9dbe0;  
+}
+:-ms-input-placeholder {  
+   color: #d9dbe0;  
+}
+
+input:focus {
     outline: none;
-    border-bottom: 1px solid #347bff;
-
+/*  border-bottom: 1px solid #347bff;*/
+    border-bottom: none;
 }
 
-input:placeholder{
-    color: red;
-}
-
-button.delete{
-    position:absolute; 
-    right:0;
+button.delete {
+    position: absolute;
+    right: 0;
     bottom: 1.3em;
     background-image: url(../images/delete.svg);
     background-repeat: no-repeat;
@@ -74,13 +110,99 @@ button.delete{
     border: none;
 }
 
-button.done{
-    position:absolute; 
-    left:0;
-    bottom: 1.3em;
+button.done {
+    position: absolute;
+    left: 0;
+    bottom: .5em;
     background-image: url(../images/done.svg);
     background-repeat: no-repeat;
     padding: 1.2em;
     background-color: transparent;
     border: none;
+    display: none;
+}
+
+button.done:hover {
+    position: absolute;
+    left: 0;
+    bottom: .5em;
+    background-image: url(../images/done_hover.svg);
+    background-repeat: no-repeat;
+    padding: 1.2em;
+    background-color: transparent;
+    border: none;
+    display: none;
+}
+
+button.done:focus{
+    outline: none;
+}
+
+div.delete{
+    background-image: url(../images/delete.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10em;
+    position: right;
+    position: fixed;
+    bottom: 0;
+    right: 5em;
+}
+
+.delete-list{
+    position: absolute;
+    left: 0;
+    bottom: .5em;
+    background-image: url(../images/delete_hover.svg);
+    background-repeat: no-repeat;
+    padding: 1.2em;
+    background-color: transparent;
+    border: none;
+    display: none;
+}
+
+/*
+button.delete-list:hover {
+    position: absolute;
+    left: 0;
+    bottom: .5em;
+    background-image: url(../images/delete_hover.svg);
+    background-repeat: no-repeat;
+    padding: 1.2em;
+    background-color: transparent;
+    border: none;
+    display: none;
+}
+*/
+
+button.delete-list:focus{
+    outline: none;
+}
+
+button.undone-list {
+    position: absolute;
+    left: 0;
+    bottom: .5em;
+    background-image: url(../images/undone.svg);
+    background-repeat: no-repeat;
+    padding: 1.2em;
+    background-color: transparent;
+    border: none;
+    display: none;
+}
+
+button.undone-list:hover {
+    position: absolute;
+    left: 0;
+    bottom: .5em;
+    background-image: url(../images/undone_hover.svg);
+    background-repeat: no-repeat;
+    padding: 1.2em;
+    background-color: transparent;
+    border: none;
+    display: none;
+}
+
+button.undone-list:focus{
+    outline: none;
 }
