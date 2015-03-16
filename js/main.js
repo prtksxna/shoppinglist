@@ -85,13 +85,21 @@ $(document).ready(function() {
     
 
 // DELETING ITEM(S) //
-
-    $(document).on('click', '.delete', function() { // When eraser is clicked
+    
+    $('.delete').click(function() { // When eraser is clicked
         $('.done').fadeOut(400); // "Done" buttons disappear
         $('.delete').animate({right: "30em"}, 300);// ERASER DISAPPEAR
         $('.undone-list').fadeOut(400); // "Undone" buttons disappear
-            $('button.delete-list').fadeIn(500); // "Delete buttons appear
-        });
+        $('.delete-list').fadeIn(500); // "Delete buttons appear
+    });
+    
+    
+//    $(document).on('click', '.delete', function() { // When eraser is clicked
+//        $('.done').fadeOut(400); // "Done" buttons disappear
+//        $('.delete').animate({right: "30em"}, 300);// ERASER DISAPPEAR
+//        $('.undone-list').fadeOut(400); // "Undone" buttons disappear
+//        $('.delete-list').fadeIn(500); // "Delete buttons appear
+//        });
     
     $(document).on('click', '.delete-list', function() { // WHEN DELETE BUTTON IS CLICKED
         $('.done','.undone-list').hide();// ALL DONE AND UNDONE BUTTONS HIDE
