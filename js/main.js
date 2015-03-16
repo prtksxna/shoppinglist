@@ -89,8 +89,9 @@ $(document).ready(function() {
     $('.delete').click(function() { // When eraser is clicked
         $('.done').fadeOut(400); // "Done" buttons disappear
         $('.delete').animate({right: "30em"}, 300);// ERASER DISAPPEAR
-        $('.undone-list').fadeOut(400); // "Undone" buttons disappear
-        $('.delete-list').fadeIn(500); // "Delete buttons appear
+        $('.undone-list').fadeOut(400); // Undone buttons disappear
+        $('.delete-list').fadeIn(500); // Delete buttons appear
+        $('.note').fadeOut(400); // Note disappears
     });
     
     

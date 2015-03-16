@@ -206,3 +206,22 @@ button.undone-list:hover {
 button.undone-list:focus{
     outline: none;
 }
+
+.note{
+  position: fixed;
+  right: 6em;
+  bottom: 7em;
+  background-image: url(../images/noteArrow.svg);
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-size: 15%;
+  border: none;
+  -webkit-transform: rotate(14.5deg);
+  -moz-transform: rotate(14.5deg);
+}
+
+p{
+    font-size: 1em;
+    color: #333;
+    padding: 1em 0 0 3em;
+}
