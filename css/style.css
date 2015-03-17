@@ -3,9 +3,10 @@
         padding: 25%
     }
     
-    body > .bg{
+    body > div.bg{
         padding: 100%;
         left: -43%;
+        background-color: #e7ecef;
     }
     
     body > div.delete{
@@ -40,7 +41,7 @@
 }
 
 @media (max-width: 590px) {
-    body > .bg{
+    body > div.bg{
         padding: 100%;
         left: -30%;
         background-color: #e7ecef;
