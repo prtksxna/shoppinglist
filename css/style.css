@@ -1,9 +1,36 @@
-@media (max-width: 640px) {
-    body > form {
-        width: 98%;
+@media (max-width: 1170px) {
+    div.delete{
+        padding: 20%
     }
     
+    body > .bg{
+        padding: 100%;
+        left: -53%;
+    }
+    
+    body > div.delete{
+        padding: 14%;
+        right: 3em;
+    }
+    
+    body > div.deleting{
+        padding: 13%;
+    }
+}
 
+@media (max-width: 640px) {
+/*
+    body > form {
+        width: 98%;
+*/
+    }
+    
+/*
+    .bg{
+        padding: 100%;
+        left: -53%;
+    }
+*/
 }
 
 html{
@@ -226,6 +253,7 @@ button.undone-list:focus{
   border: none;
   -webkit-transform: rotate(14.5deg);
   -moz-transform: rotate(14.5deg);
+    font-family: 'Permanent Marker', cursive;
 }
 
 p{
