@@ -41,8 +41,9 @@
 
 @media (max-width: 590px) {
     body > .bg{
-        padding: 200%;
-        left: -90%;
+        padding: 100%;
+        left: -30%;
+        background-color: #e7ecef;
     }
     
     body > div.delete{
@@ -55,14 +56,18 @@
     }
     
         body > div.deleting{
-        padding: 30%;
-        left: -29em;
-        top: -10em;
+        padding: 23%;
+        left: -26em;
+        top: -5em;
     }
     
     body > div.delete{
-        padding: 30%;
+        padding: 23%;
         right: 2em;
+    }
+    
+        body > .residue{
+        padding: 10em;
     }
 }
 
