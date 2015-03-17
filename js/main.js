@@ -6,7 +6,7 @@ var anotherListItem = '<div class="form-list"><button type="button" class="delet
 $(document).ready(function() {
 
     $('input:first').focus();
-    $('.delete').delay(1000).animate({right: "12em"}, 500);
+    $('.delete').delay(1000).animate({right: "+=3em"}, 500);
     $('.note').delay(5000).fadeOut(2000);
 
     // ADDING MORE ITEMS ON THE LIST //
@@ -114,7 +114,7 @@ $(document).ready(function() {
         if($('.done').is(':visible')){
         $('.done').fadeOut(400); // "Done" buttons disappear
         $('.delete').animate({bottom: "-20em"}, 300);// ERASER DISAPPEAR
-        $('.deleting').animate({left: "-1.5em"}, 300);
+        $('.deleting').animate({left: "+=18.5em"}, 300);
         $('.undone-list').fadeOut(400); // Undone buttons disappear
         $('.delete-list').fadeIn(500); // Delete buttons appear
         }
@@ -122,7 +122,7 @@ $(document).ready(function() {
         
     $('.deleting').click(function(){
         if($('.delete-list').is(':visible')){
-        $('.deleting').animate({left: "-20em"}, 300);
+        $('.deleting').animate({left: "-=18.5em"}, 300);
         $('.done').fadeIn(400); // "Done" buttons reappear
         $('.delete').animate({bottom: "0"}, 300);// ERASER REAPPEAR
         $('.delete-list').fadeOut(500); // Delete buttons disappear

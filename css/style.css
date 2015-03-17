@@ -1,11 +1,11 @@
 @media (max-width: 1170px) {
     div.delete{
-        padding: 20%
+        padding: 25%
     }
     
     body > .bg{
         padding: 100%;
-        left: -53%;
+        left: -43%;
     }
     
     body > div.delete{
@@ -14,23 +14,56 @@
     }
     
     body > div.deleting{
-        padding: 13%;
+        padding: 14%;
+        left: -27em;
+    }
+    
+    body > div.page > form{
+        margin: 10% 20%;
+    }
+    
+    body > div.page > form > div.form-list > input{
+        font-size: 2em;    
+    }
+    
+    body > .residue{
+        padding: 15em;
+    }
+    
+    body > div.note > p{
+        font-size: 1em;
+    }
+    
+    body > div.note {
+        right: 0.5em;
     }
 }
 
-@media (max-width: 640px) {
-/*
-    body > form {
-        width: 98%;
-*/
+@media (max-width: 590px) {
+    body > .bg{
+        padding: 147%;
+        left: -69%;
     }
     
-/*
-    .bg{
-        padding: 100%;
-        left: -53%;
+    body > div.delete{
+        right: 0;
     }
-*/
+    
+    body > div.note{
+        right: 1em;
+        bottom: 6em;
+    }
+    
+        body > div.deleting{
+        padding: 30%;
+        left: -29em;
+        top: -10em;
+    }
+    
+    body > div.delete{
+        padding: 30%;
+        right: 2em;
+    }
 }
 
 html{
@@ -43,7 +76,7 @@ html{
     background-repeat: no-repeat;
     padding: 50%;
     z-index: -5;
-    position: absolute;
+    position: fixed;
 }
 
 /*
@@ -97,7 +130,7 @@ form {
     width: 29em;
     overflow: scroll;
     max-height: 50em;
-    position: absolute;
+    position: fixed;
     z-index: 100;
 }
 .form-list {
@@ -265,7 +298,7 @@ p{
 .residue{
   position: fixed;
   top: 0px;
-  left: 380px;
+  left: 25%;
   background-image: url(../images/residue.png);
   background-repeat: no-repeat;
   background-color: transparent;
