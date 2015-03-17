@@ -1,4 +1,4 @@
-@media (max-width: 1170px) {
+@media (max-width: 1170px) and (min-width: 589px) {
     div.delete{
         padding: 25%
     }
@@ -40,7 +40,7 @@
     }
 }
 
-@media (max-width: 590px) {
+@media (max-width: 590px){
     body > div.bg{
         padding: 100%;
         left: -30%;
@@ -77,6 +77,10 @@
     
         body > div.page > form > div.form-list > input{
         font-size: 2.3em;    
+    }
+    
+        body > div.page > form{
+        margin: 8% 20%;
     }
 }
 
