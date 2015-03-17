@@ -41,8 +41,8 @@
 
 @media (max-width: 590px) {
     body > .bg{
-        padding: 159%;
-        left: -80%;
+        padding: 165%;
+        left: -90%;
     }
     
     body > div.delete{
