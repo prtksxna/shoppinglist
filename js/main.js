@@ -35,12 +35,12 @@ $(document).ready(function() {
 
     
     // PRESSING TAB FOCUSES THE NEXT LINE
-    $(document).on('keydown', 'input', function(tab){
-        if (tab.keyCode == 9) {
-            tab.preventDefault();
-            $(this).parent().next().find('input').focus();
-            }
-    });
+//    $(document).on('keydown', 'input', function(tab){
+//        if (tab.keyCode == 9) {
+//            tab.preventDefault();
+//            $(this).parent().next().find('input').focus();
+//            }
+//    });
     
 
     // STRIKETHROUGH ON HOVER
@@ -96,16 +96,40 @@ $(document).ready(function() {
         $(this).css("right", "-=5px");
     });
     
+// ON HOVER, MOVE TOP ERASER
+    $('div.deleting').mouseover(function(){
+        $(this).css("left", "+=5px");
+    });
+    
+// ON MOUSEOUT, MOVE TOP ERASER BACK
+    $('div.deleting').mouseout(function(){
+        $(this).css("left", "-=5px");
+    });
+    
     
     
 // DELETING ITEM(S) //
     
     $('.delete').click(function() { // When eraser is clicked
+        if($('.done').is(':visible')){
         $('.done').fadeOut(400); // "Done" buttons disappear
-        $('.delete').animate({right: "30em"}, 300);// ERASER DISAPPEAR
+        $('.delete').animate({bottom: "-20em"}, 300);// ERASER DISAPPEAR
+        $('.deleting').animate({left: "-1.5em"}, 300);
         $('.undone-list').fadeOut(400); // Undone buttons disappear
         $('.delete-list').fadeIn(500); // Delete buttons appear
+        }
     });
+        
+    $('.deleting').click(function(){
+        if($('.delete-list').is(':visible')){
+        $('.deleting').animate({left: "-20em"}, 300);
+        $('.done').fadeIn(400); // "Done" buttons reappear
+        $('.delete').animate({bottom: "0"}, 300);// ERASER REAPPEAR
+        $('.delete-list').fadeOut(500); // Delete buttons disappear
+        }
+    });    
+
+    
     
     
 //    $(document).on('click', '.delete', function() { // When eraser is clicked
@@ -118,8 +142,10 @@ $(document).ready(function() {
     $(document).on('click', '.delete-list', function() { // WHEN DELETE BUTTON IS CLICKED
         $('.done','.undone-list').hide();// ALL DONE AND UNDONE BUTTONS HIDE
         $(this).parent().children().fadeOut(300, function() { // "Delete-list" button and that particular <div></div> will fade out and disappear
+         $('.residue').css('top',(currentMousePos.y-40)+'px').delay(150).fadeIn(300);
             $(this).parent().delay(300).slideUp(500, function() { // Animation to slide remaining <div>'s up
                 $(this).remove(); //Once <div></div> has disappeared
+                 $('.residue').delay(3000).fadeOut(2000);
             });
         });
     });
@@ -129,7 +155,12 @@ $(document).ready(function() {
 // DONE DELETING ITEM //
 
     
-    
+//TRACK MOUSE MOVEMENT TO STORED COORDINATES//
+     var currentMousePos = { x: -1, y: -1 };
+    $(document).mousemove(function(event) {
+        currentMousePos.x = event.pageX;
+        currentMousePos.y = event.pageY;
+    });
     
     
 });

@@ -2,29 +2,38 @@
     body > form {
         width: 98%;
     }
+    
+
 }
 
 html{
     font-family: 'Permanent Marker', cursive;
 }
 
+.bg{
+    background-image: url(../images/background.jpg);
+    background-size: contain;  
+    background-repeat: no-repeat;
+    padding: 50%;
+    z-index: -5;
+    position: absolute;
+}
+
+/*
 img.bg {
-    /* Set rules to fill background */
     min-height: 100%;
     min-width: 1024px;
-    /* Set up proportionate scaling */
     width: 100%;
     height: auto;
-    /* Set up positioning */
     position: fixed;
     top: 0;
     left: 0;
-    
     z-index: -1;
 }
+*/
 
 body {
-    margin-top: 4em;
+    margin: 0;
     overflow: hidden;
     
 }
@@ -56,21 +65,22 @@ body {
 /*INPUT*/
 
 form {
-    margin: 2em 18em;
+/*    margin: 8em 18em;*/
+    margin: 6% 22%;
     width: 29em;
     overflow: scroll;
     max-height: 50em;
-    position: fixed;
+    position: absolute;
+    z-index: 100;
 }
 .form-list {
     position: relative;
 }
 input {
     background: transparent;
-    margin-left: 40px;
+    margin-left: 1em;
     position: relative;
     border: 0px;
-/*  border-bottom: 1px solid #ccc;*/
     border-bottom: none;
     width: 88%;
     padding: 0;
@@ -142,11 +152,22 @@ div.delete{
     background-image: url(../images/delete.png);
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 9em;
+    padding: 9%;
     position: right;
     position: fixed;
     bottom: 0;
     right: 6em;
+}
+
+div.deleting{
+    background-image: url(../images/eraser.png);
+    background-repeat: no-repeat;
+    background-size: 90%;
+    padding: 9%;
+    position: right;
+    position: fixed;
+    left: -20em;
+    top: -3em;
 }
 
 .delete-list{
@@ -211,4 +232,17 @@ p{
     font-size: 1em;
     color: #333;
     padding: 1em 0 0 3em;
+}
+
+.residue{
+  position: fixed;
+  top: 0px;
+  left: 380px;
+  background-image: url(../images/residue.png);
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-size: 80%;
+  padding: 20em;
+  display: none;
+  z-index: 1;
 }
